@@ -1,0 +1,78 @@
+﻿<Window x:Class="OnlineStoreWPF.AddGoodsPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnlineStoreWPF"
+        mc:Ignorable="d"
+        Title="AddGoodsPanel" Height="392.417" Width="566.469" AllowsTransparency="True" WindowStyle="None" Icon="img/AdminLogIcon.jpg" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="img/ADDPanelBG.jpg"/>
+    </Window.Background>
+    <Grid>
+
+
+        <Button x:Name="Add_button" Content="Add" IsEnabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="303,320,0,0" Click="Add_button_Click" Background="#FF73AA8A" Height="30"/>
+        <Button x:Name="New_button" Content="New" IsEnabled="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="185,320,0,0" Click="New" Background="#FFC5CB43" Height="30"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="67,320,0,0" Click="Back" Background="#FFE5AD8C" Height="30"/>
+        <TextBox x:Name="Namebox" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="113,44,0,0" FontSize="16" />
+        <TextBox x:Name="PriceBox" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="113,94,0,0" FontSize="16"/>
+        <TextBox x:Name="IDBox" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="113,143,0,0" FontSize="16" />
+        <TextBox x:Name="Pro1Box" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="113,193,0,0" FontSize="16" />
+        <TextBox x:Name="Pro2Box" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Margin="113,242,0,0" FontSize="16" />
+
+
+
+
+        <CheckBox x:Name="BookCH" Content="Book" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="417,81,0,0" RenderTransformOrigin="0.5,0.5" FontSize="5" Foreground="#FFE82626" FontStyle="Italic" FontFamily="Adobe Song Std L" FontWeight="Bold" Checked="BookCH_Checked">
+            <CheckBox.Background>
+                <ImageBrush ImageSource="img/BookIcon.jpg"/>
+            </CheckBox.Background>
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="5" ScaleY="5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+
+        <CheckBox x:Name="VideoCH" Content="Video" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="419,150,0,0" RenderTransformOrigin="0.5,0.5" FontSize="5" Foreground="#FFE82626" FontStyle="Italic" FontFamily="Adobe Song Std L" FontWeight="Bold" Checked="VideoCH_Checked">
+            <CheckBox.Background>
+                <ImageBrush ImageSource="img/VidoeIcon.png"/>
+            </CheckBox.Background>
+
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="5" ScaleY="5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+
+        <CheckBox x:Name="MagazineCH" Content="Magazine
+                  " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="456,219,0,0" RenderTransformOrigin="0.5,0.5" FontSize="4" Foreground="#FFE82626" FontStyle="Italic" FontFamily="Adobe Song Std L" FontWeight="Bold" Checked="MagazineCH_Checked">
+            <CheckBox.Background>
+                <ImageBrush ImageSource="img/MagIcon.png"/>
+            </CheckBox.Background>
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="5" ScaleY="5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <Label Content="Name :" HorizontalAlignment="Left" Margin="22,27,0,0" VerticalAlignment="Top" FontFamily="Adobe Myungjo Std M" FontSize="22"/>
+        <Label Content="Pro 2 :" HorizontalAlignment="Left" Margin="22,229,0,0" VerticalAlignment="Top" FontFamily="Adobe Myungjo Std M" FontSize="22"/>
+        <Label Content="Pro 1 :" HorizontalAlignment="Left" Margin="22,179,0,0" VerticalAlignment="Top" FontFamily="Adobe Myungjo Std M" FontSize="22"/>
+        <Label Content="ID :" HorizontalAlignment="Left" Margin="22,130,0,0" VerticalAlignment="Top" FontFamily="Adobe Myungjo Std M" FontSize="22"/>
+        <Label Content="Price :" HorizontalAlignment="Left" Margin="22,80,0,0" VerticalAlignment="Top" FontFamily="Adobe Myungjo Std M" FontSize="22"/>
+
+
+    </Grid>
+</Window>

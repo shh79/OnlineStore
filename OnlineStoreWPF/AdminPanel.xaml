@@ -1,0 +1,50 @@
+﻿<Window x:Class="OnlineStoreWPF.AdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnlineStoreWPF"
+        mc:Ignorable="d"
+        Title="AdminPanel" Height="450" Width="686.967" Icon="img/AdminLogIcon.jpg" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="img/AdminPP.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Button x:Name="exitbtn" Content="Exit" HorizontalAlignment="Left" Margin="30,384,0,0" VerticalAlignment="Top" Width="70" Height="40" Click="exitbtn_Click" Background="#FF93FFFD" Foreground="#FF92305C" FontFamily="Adobe Myungjo Std M" FontSize="19"/>
+        <DockPanel HorizontalAlignment="Left" Height="35" LastChildFill="False" VerticalAlignment="Top" Width="687" Background="Black">
+            <TextBox x:Name="AdminEmail" IsHitTestVisible="False" Height="35" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="687" Background="{x:Null}" Foreground="White" BorderBrush="Black" TextAlignment="Center" FontSize="20" FontFamily="Andalus" SelectionBrush="{x:Null}"/>
+        </DockPanel>
+        <Image Height="35" VerticalAlignment="Top" Margin="0,0,652.2,0" Source="img/AdminLogIcon.jpg"/>
+        <ListBox x:Name="GoodsList" HorizontalAlignment="Left" Height="194" Margin="30,140,0,0" VerticalAlignment="Top" Width="408"/>
+        <TextBox x:Name="Searchbar" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="35" Margin="100,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237" FontSize="22"/>
+
+        <Button x:Name="searchbtn" Content="Search" HorizontalAlignment="Left" Margin="368,90,0,0" VerticalAlignment="Top" Width="70" Height="35" Click="serchbtn_Click" Background="#FF93FFFD" Foreground="#FF92305C" FontFamily="Adobe Myungjo Std M" FontSize="19"/>
+
+        <Button x:Name="Showbtn" Content="Show Customers" HorizontalAlignment="Left" Margin="198,384,0,0" VerticalAlignment="Top" Width="171" Height="40" Click="Showbtn_Click" Background="#FF93FFFD" Foreground="#FF92305C" FontFamily="Adobe Myungjo Std M" FontSize="19"/>
+
+        <Button x:Name="changepassbtn" Content="Change Password" HorizontalAlignment="Left" Margin="461,384,0,0" VerticalAlignment="Top" Width="183" Height="40" Click="Chgpassbtn_Click" Background="#FF93FFFD" Foreground="#FF92305C" FontFamily="Adobe Myungjo Std M" FontSize="19"/>
+
+        <Button x:Name="Addgood" Content="Add" HorizontalAlignment="Left" Margin="505,140,0,0" VerticalAlignment="Top" Width="118" Height="40" Click="addbtn_Click" Background="#FF93FFFD" Foreground="#FF92305C" FontFamily="Adobe Myungjo Std M" FontSize="19" RenderTransformOrigin="0.214,1.24"/>
+        <Button x:Name="removegood" Content="Remove" IsEnabled="{Binding ElementName=ManageList, Path=SelectedItems.Count}" HorizontalAlignment="Left" Margin="505,212,0,0" VerticalAlignment="Top" Width="118" Height="40" Click="removebtn_Click" Background="#FF93FFFD" Foreground="#FF92305C" FontFamily="Adobe Myungjo Std M" FontSize="19"/>
+
+
+        <ListView x:Name="ManageList" HorizontalAlignment="Left" VerticalAlignment="Top" Height="208" Margin="30,140,0,0" Width="431">
+            <ListView.View>
+
+                <GridView>
+
+                    <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Price" Width="75" DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn Header="ID" Width="75" DisplayMemberBinding="{Binding ID}" />
+                    <GridViewColumn Header="Pro 1" Width="75" DisplayMemberBinding="{Binding Pro1}" />
+                    <GridViewColumn Header="Pro 2" Width="75" DisplayMemberBinding="{Binding Pro2}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="ID :" HorizontalAlignment="Left" Margin="30,69,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Adobe Myungjo Std M"/>
+
+
+
+    </Grid>
+</Window>
