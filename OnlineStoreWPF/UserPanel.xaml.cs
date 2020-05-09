@@ -178,6 +178,7 @@ namespace OnlineStoreWPF
                     win = new PaymentPage(TOC);
                 }
 
+                double FNPrice = 0;
 
                 for (int i = 0; i < cartlv.Items.Count; ++i)
                 {
@@ -185,9 +186,15 @@ namespace OnlineStoreWPF
 
                     //win.FinalList.Items.Add(cartlv.Items[i]);
                 }
+
+                for(int i = 0; i < win.Fitem.Count; ++i)
+                {
+                    FNPrice += win.Fitem[i].Price;
+                }
+
                 win.FinalList.ItemsSource = win.Fitem;
 
-                win.totalpay.Text = Currentpay.Text;
+                win.totalpay.Text = FNPrice.ToString() + " $";
 
                 win.Calculate();
 
