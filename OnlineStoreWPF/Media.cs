@@ -30,7 +30,6 @@ namespace OnlineStoreWPF
 
     abstract class Media
     {
-        static public int CountofObj = 0;
 
         private string name;
         private int cost;
@@ -65,12 +64,12 @@ namespace OnlineStoreWPF
         {
             this.writer = writer;
             this.publisher = publisher;
-            ++CountofObj;
+            
         }
 
         public override int Tax()
         {
-            return (CountofObj * 10);
+            return 10;
         }
     }
 

@@ -81,6 +81,35 @@ namespace OnlineStoreWPF
 
         private void Add_button_Click(object sender, RoutedEventArgs e)
         {
+
+            try
+            {
+                if (VideoCH.IsChecked == true)
+                {
+                    int temp1 = int.Parse(Pro1Box.Text);
+                    int temp2 = int.Parse(Pro2Box.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Pro1 and Pro2 should be contain numberic format .", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            try
+            {
+                if (MagazineCH.IsChecked == true)
+                {
+                    int temp1 = int.Parse(Pro2Box.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Pro2 should be contain numberic format .", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+
             bool CHflag = false;
             bool Fillflag = false;
 

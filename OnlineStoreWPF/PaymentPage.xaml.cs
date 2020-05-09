@@ -94,14 +94,12 @@ namespace OnlineStoreWPF
 
         public void Calculate()
         {
-            Media[] BookItem = new Media[Fitem.Count];
-            
+            Books b;
             Videos v;
             Magazines m;
 
             double OutputPrice = 0;
 
-            int j = 0;
 
             for(int i = 0; i < Fitem.Count; ++i)
             {
@@ -109,8 +107,9 @@ namespace OnlineStoreWPF
 
                 if (temp == TGoods.Books)
                 {
-                    BookItem[j] = new Books(Fitem[i].Name, Fitem[i].Price, Fitem[i].ID, Fitem[i].Pro1, Fitem[i].Pro2);
-                    ++j;
+                    b = new Books(Fitem[i].Name, Fitem[i].Price, Fitem[i].ID, Fitem[i].Pro1, Fitem[i].Pro2);
+
+                    OutputPrice += b.Outputcost();
                 }
                 else if (temp == TGoods.Videos)
                 {
@@ -125,11 +124,6 @@ namespace OnlineStoreWPF
                     OutputPrice += m.Outputcost();
                 }
 
-            }
-
-            for(int i = 0; i < BookItem.Length; ++i)
-            {
-                OutputPrice += BookItem[i].Outputcost();
             }
 
             double TP = double.Parse(totalpay.Text.Remove(totalpay.Text.Length - 1));

@@ -197,6 +197,8 @@ namespace OnlineStoreWPF
             {
                 MessageBox.Show(ex.Message);
             }
+           
+            
         }
 
         private void Addto_Click(object sender, RoutedEventArgs e)
