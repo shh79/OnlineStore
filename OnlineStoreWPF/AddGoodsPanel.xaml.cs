@@ -22,9 +22,13 @@ namespace OnlineStoreWPF
     /// </summary>
     public partial class AddGoodsPanel : Window
     {
-        public AddGoodsPanel()
+        int[] tempID;
+        public AddGoodsPanel(int[] IDNum)
         {
             InitializeComponent();
+
+            tempID = IDNum;
+
         }
 
         private void Back(object sender, RoutedEventArgs e)
@@ -128,6 +132,17 @@ namespace OnlineStoreWPF
 
                     id = int.Parse(IDBox.Text);
                     pr = int.Parse(PriceBox.Text);
+
+
+                    for(int i = 0; i < tempID.Length; ++i)
+                    {
+                        if (id == tempID[i])
+                        {
+                            MessageBox.Show("This ID is already exist .", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
+                        }
+                    }
+
 
                     if (BookCH.IsChecked == true)
                     {

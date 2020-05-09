@@ -163,7 +163,13 @@ namespace OnlineStoreWPF
 
         private void addbtn_Click(object sender, RoutedEventArgs e)
         {
-            AddGoodsPanel win = new AddGoodsPanel();
+            int[] IDNum = new int[items.Count];
+            for(int i = 0; i < IDNum.Length; ++i)
+            {
+                IDNum[i] = items[i].ID;
+            }
+
+            AddGoodsPanel win = new AddGoodsPanel(IDNum);
             win.ShowDialog();
 
         }
