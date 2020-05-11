@@ -10,10 +10,10 @@
         <ImageBrush ImageSource="img/BG5.png"/>
     </Window.Background>
     <Grid>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="36,602,0,0" VerticalAlignment="Top" Width="86" Click="backbtn" Height="67" FontSize="35" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222"/>
-        <Button Content="Buy" HorizontalAlignment="Left" Margin="403,602,0,0" VerticalAlignment="Top" Width="84" Height="67" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222" Click="Button_Click" FontSize="35"/>
-        <Button x:Name="chancebtn" Content="Chance" HorizontalAlignment="Left" Margin="292,602,0,0" VerticalAlignment="Top" Width="87" Height="67" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222" Click="chancebtn_Click" FontSize="24"/>
-        <Button x:Name="UseOff" Content="Use Off" HorizontalAlignment="Left" Margin="155,602,0,0" VerticalAlignment="Top" Width="107" Height="67" FontSize="24" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222" Click="UseOFFClick" />
+        <Button Content="Back" HorizontalAlignment="Left" Margin="36,602,0,0" VerticalAlignment="Top" Width="103" Click="backbtn" Height="67" FontSize="35" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222"/>
+        <Button Content="Buy" HorizontalAlignment="Left" Margin="385,602,0,0" VerticalAlignment="Top" Width="102" Height="67" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222" Click="Button_Click" FontSize="35"/>
+        <Button x:Name="chancebtn" Content="Chance" HorizontalAlignment="Left" Margin="205,602,0,0" VerticalAlignment="Top" Width="124" Height="67" FontFamily="Adobe Myungjo Std M" Background="#FF7F1717" Foreground="#FFD4C03E" BorderBrush="#FF5C2222" Click="chancebtn_Click" FontSize="30"/>
+
 
 
 

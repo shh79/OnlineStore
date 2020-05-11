@@ -28,3 +28,5 @@ E:\VS code PROJ\OnlineStoreWPF\OnlineStoreWPF\obj\Debug\ChangePass.g.cs
 E:\VS code PROJ\OnlineStoreWPF\OnlineStoreWPF\obj\Debug\ChangePass.baml
 E:\VS code PROJ\OnlineStoreWPF\OnlineStoreWPF\obj\Debug\AddGoodsPanel.g.cs
 E:\VS code PROJ\OnlineStoreWPF\OnlineStoreWPF\obj\Debug\AddGoodsPanel.baml
+E:\VS code PROJ\OnlineStoreWPF\OnlineStoreWPF\obj\Debug\EndOfBuy.g.cs
+E:\VS code PROJ\OnlineStoreWPF\OnlineStoreWPF\obj\Debug\EndOfBuy.baml

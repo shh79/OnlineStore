@@ -71,25 +71,26 @@ namespace OnlineStoreWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult r = MessageBox.Show("Are you sure ?", "Finish the shoping .", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (r == MessageBoxResult.Yes)
+            if (FinalList.Items.Count != 0)
             {
-                MessageBox.Show("Thanks for shoping . Have good day .","Thanks",MessageBoxButton.OK,MessageBoxImage.Information);
-                Application.Current.Windows[Application.Current.Windows.Count - 2].Close();
-                this.Close();
+                MessageBoxResult r = MessageBox.Show("Are you sure ?", "Finish the shoping .", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (r == MessageBoxResult.Yes)
+                {
+                    EndOfBuy EWin = new EndOfBuy();
+
+                    EWin.Totalpay.Text = finalpay.Text;
+
+                    EWin.ShowDialog();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Your cart is empty .", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
 
-        private void UseOFFClick(object sender, RoutedEventArgs e)
-        {
-            int stack = FinalList.SelectedIndex;
-
-            string temp = Fitem[stack].Type.ToString();
-
-            MessageBox.Show(temp);
-
-        }
 
 
         public void Calculate()

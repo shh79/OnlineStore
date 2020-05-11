@@ -66,6 +66,9 @@
       <DependentUpon>ChangePass.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes.cs" />
+    <Compile Include="EndOfBuy.xaml.cs">
+      <DependentUpon>EndOfBuy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Extention.cs" />
     <Compile Include="Media.cs" />
     <Compile Include="PaymentPage.xaml.cs">
@@ -93,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChangePass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EndOfBuy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\ADDPanelBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Payment-BG.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

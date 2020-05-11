@@ -6,27 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStoreWPF
 {
-    class Library
-    {
-        static public Media[] Cart = new Media[20];
-        static public int Capacity = 0;
-
-
-        public void Addmedia()
-        {
-
-        }
-
-        public void Delmedia()
-        {
-
-        }
-
-        public void Searchmedia()
-        {
-
-        }
-    }
+    
 
     abstract class Media
     {
