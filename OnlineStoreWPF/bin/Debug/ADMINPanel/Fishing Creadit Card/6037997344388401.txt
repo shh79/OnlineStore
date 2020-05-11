@@ -1,4 +1,0 @@
-Card ID :6037997344388401
-Expire Date :01/04
-CCV2 :2071
-PassCode :00598
