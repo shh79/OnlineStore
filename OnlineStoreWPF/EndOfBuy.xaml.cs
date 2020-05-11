@@ -77,6 +77,7 @@ namespace OnlineStoreWPF
 
         private void Backbtn_Click(object sender, RoutedEventArgs e)
         {
+            timer.Stop();
             this.Close();
         }
 
@@ -90,7 +91,7 @@ namespace OnlineStoreWPF
                     {
                         Fishing();
                         MessageBox.Show("Thanks for shoping . Have good day .", "Thanks", MessageBoxButton.OK, MessageBoxImage.Information);
-                        
+                        timer.Stop();
                         CloseAllWindows();
                         this.Close();
                     }

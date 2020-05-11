@@ -139,6 +139,10 @@ namespace OnlineStoreWPF
 
         static public string Code(this string pass)
         {
+            Random r = new Random();
+
+            int key = r.Next(10, 75);
+
             char[] seperated = pass.ToCharArray();
 
             for(int i = 0; i < seperated.Length; ++i)
@@ -147,7 +151,7 @@ namespace OnlineStoreWPF
                 {
                     if (seperated[i] == passchar[j])
                     {
-                        seperated[i] = passchar[limmitarray(j + 25)];
+                        seperated[i] = passchar[limmitarray(j + key)];
                         break;
                     }
                 }
@@ -155,14 +159,18 @@ namespace OnlineStoreWPF
 
             string output = new string(seperated);
 
-            output += "He";
+            output += key.ToString();
             
             return output;
         }
 
         static public string DeCode(this string pass)
         {
+            string key = pass.Remove(0, pass.Length - 2);
             pass = pass.Remove(pass.Length - 2);
+
+            int intkey = int.Parse(key);
+
             try
             {
                 char[] seperated = pass.ToCharArray();
@@ -173,7 +181,7 @@ namespace OnlineStoreWPF
                     {
                         if (seperated[i] == passchar[j])
                         {
-                            seperated[i] = passchar[limmitarray(j - 25)];
+                            seperated[i] = passchar[limmitarray(j - intkey)];
                             break;
                         }
                     }

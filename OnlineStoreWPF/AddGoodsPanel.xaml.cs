@@ -147,14 +147,18 @@ namespace OnlineStoreWPF
                     if (BookCH.IsChecked == true)
                     {
                         type = TGoods.Books;
+                        
                     }
                     else if (VideoCH.IsChecked == true)
                     {
                         type = TGoods.Videos;
+                        p1 += " Mins";
+                        p2 += " DVDs";
                     }
                     else
                     {
                         type = TGoods.Magazines;
+                        p2 += " Pages";
                     }
 
                     AdminPanel.items.Add(new Goods { ID = id, Name = n, Price = pr, Pro1 = p1, Pro2 = p2, Type = type });

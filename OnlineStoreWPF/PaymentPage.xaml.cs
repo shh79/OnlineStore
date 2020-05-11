@@ -114,13 +114,23 @@ namespace OnlineStoreWPF
                 }
                 else if (temp == TGoods.Videos)
                 {
-                    v = new Videos(Fitem[i].Name, Fitem[i].Price, Fitem[i].ID, Fitem[i].Pro1, Fitem[i].Pro2);
+                    string x = Fitem[i].Pro1;
+                    string y = Fitem[i].Pro2;
+
+                    x = x.Remove(x.Length - 4);
+                    y = y.Remove(y.Length - 4);
+
+                    
+                    v = new Videos(Fitem[i].Name, Fitem[i].Price, Fitem[i].ID, x, y);
 
                     OutputPrice += v.Outputcost();
                 }
                 else
                 {
-                    m = new Magazines(Fitem[i].Name, Fitem[i].Price, Fitem[i].ID, Fitem[i].Pro1, Fitem[i].Pro2);
+                    string y = Fitem[i].Pro2;
+                    y = y.Remove(y.Length - 5);
+
+                    m = new Magazines(Fitem[i].Name, Fitem[i].Price, Fitem[i].ID, Fitem[i].Pro1, y);
 
                     OutputPrice += m.Outputcost();
                 }
