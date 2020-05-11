@@ -1,0 +1,13 @@
+Default password :MyShop1234$
+=====================================================================================================================================
+if you forget your password enter "Developer" in Username field and calculate sum of day, month and year of your system and put it in 
+the password field .After that your password will be changed to "0000" and then you can change it to anything you want .
+
+Exampele:
+today is :5/11/2020
+Username :Developer
+Password:2036   /// (05) + (11) + (2020) = 2036
+
+=====================================================================================================================================
+
+			Developed by Hessam Hosseini
