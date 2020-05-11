@@ -86,6 +86,7 @@ namespace OnlineStoreWPF
             }
             else if (Extention.isValidEmail(UserNamebox.Text))
             {
+                
                 if (PassBox.Password == pass)
                 {
                     AdminPanel win = new AdminPanel();

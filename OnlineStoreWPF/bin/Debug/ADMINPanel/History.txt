@@ -44,3 +44,9 @@
 '1710' Changed at 5/11/2020 7:43:00 PM By h@h.s To '5050'
 ==========================
 '5050' Changed at 5/11/2020 7:45:40 PM By H2@h.s To 'MyShop1234$'
+==========================
+'MyShop1234$' Changed at 5/11/2020 7:55:21 PM By G2@j.d To '1234'
+==========================
+'1234' Changed at 5/11/2020 8:06:42 PM By F@g.c To 'MyShop1234$'
+==========================
+'0000' Changed at 5/11/2020 8:11:52 PM By Developer To 'MyShop1234$'
