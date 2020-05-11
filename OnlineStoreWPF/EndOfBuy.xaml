@@ -38,6 +38,7 @@
 
         <TextBox x:Name="Totalpay" HorizontalAlignment="Left" IsEnabled="False" Height="41" Margin="259,24,0,0" TextWrapping="Wrap" Text="99999 $" VerticalAlignment="Top" Width="158" FontSize="30" Background="#FF6C450E" Foreground="White" FontFamily="Algerian"/>
 
+        <TextBox x:Name="TimeCounter" HorizontalAlignment="Left" Height="41" Margin="70,24,0,0" TextWrapping="Wrap" Text="1:30" VerticalAlignment="Top" Width="95" FontSize="30" TextAlignment="Center" Background="#FFA07232" Foreground="#FF1C1C1C" FontFamily="Stencil"/>
 
 
     </Grid>

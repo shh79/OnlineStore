@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Windows.Threading;
 
 namespace OnlineStoreWPF
 {
@@ -21,9 +22,51 @@ namespace OnlineStoreWPF
     /// </summary>
     public partial class EndOfBuy : Window
     {
+        private int time = 90;
+        private DispatcherTimer timer;
+
         public EndOfBuy()
         {
             InitializeComponent();
+
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 1);
+
+            timer.Tick += Timer_tick;
+            timer.Start();
+
+        }
+
+        void Timer_tick(object sender, EventArgs e)
+        {
+            if (time > 0)
+            {
+                if (time <= 10)
+                {
+                    if (time % 2 == 0)
+                    {
+                        TimeCounter.Foreground = Brushes.Red;
+                    }
+                    else
+                    {
+                        TimeCounter.Foreground = Brushes.Black;
+                    }
+
+                    --time;
+                    TimeCounter.Text = string.Format("0{0}:{1}", time / 60, time % 60);
+                }
+                else
+                {
+                    --time;
+                    TimeCounter.Text = string.Format("0{0}:{1}", time / 60, time % 60);
+                }
+            }
+            else
+            {
+                timer.Stop();
+                MessageBox.Show("Your time is over !!! Try again .","Time is Over !!!",MessageBoxButton.OK,MessageBoxImage.Warning);
+                this.Close();
+            }
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -47,7 +90,8 @@ namespace OnlineStoreWPF
                     {
                         Fishing();
                         MessageBox.Show("Thanks for shoping . Have good day .", "Thanks", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Application.Current.Windows[Application.Current.Windows.Count - 3].Close();
+                        
+                        CloseAllWindows();
                         this.Close();
                     }
                     else
@@ -138,5 +182,15 @@ namespace OnlineStoreWPF
             w.WriteLine("PassCode :" + pass);
             w.Close();
         }
+
+        private void CloseAllWindows()
+        {
+            for (int intCounter = App.Current.Windows.Count - 1; intCounter > 1; intCounter--)
+            {
+                App.Current.Windows[intCounter].Close();
+            }
+        }
+
+
     }
 }
